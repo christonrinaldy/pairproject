@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Studio Time</h1>
+    <form action="/studioTime/add" method="POST">
+    <label for="">Studio</label><br>
+    <select name="studio" id="">
+        <% data.forEach(el=>{ %>
+            <option value="<%= el.id %>"><%= el.name %></option>
+        <% }) %>
+    </select><br>
+    <label for="">Time</label><br>
+    <select name="time" id="">
+        <% data1.forEach(ele=>{ %>
+            <option value="<%= ele.id %>"><%= ele.time %></option>
+        <% }) %>
+    </select><br>
+    <button type="submit">Submit</button>
+    
+    </form>
+</body>
+</html>
